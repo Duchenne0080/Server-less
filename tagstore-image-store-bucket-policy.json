@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1591865260343",
+    "Statement": [
+        {
+            "Sid": "Stmt1591864958371",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::563918445432:role/ImageUploadRole"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::tagstore-image-store/*"
+        },
+        {
+            "Sid": "Stmt1591865235188",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::tagstore-image-store/*"
+        }
+    ]
+}
